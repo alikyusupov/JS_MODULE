@@ -31,9 +31,20 @@ console.log(compare_end)//13
 чисел 8.5 и 11.45 ближайшее к десяти 11.45.
 */
 
-let m = 6.5, n = 12.5;
-let closest = (10-m) < (n-10) ? m : n;
+//Здесь предполагается что одно число
+//обязательно меньше 10
+//а другое - больше
+let middle = 10, m = 6.5, n = 12.5;
+let closest = (middle-m) < (n-middle) ? m : n;
 console.log(closest)//12.5
+
+//здесь без дополнительных условий указанных ранее
+
+let result_1 = m > middle ? m - middle : middle - m;
+let result_2 = n > middle ? n - middle : middle - n;
+let closest_version_two = result_1 < result_2 ? m : n;
+console.log(closest_version_two)//12.5
+
 
 /*
 Трёхмерное пространство:
