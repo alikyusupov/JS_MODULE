@@ -3,7 +3,7 @@
     соответствующего времени года ("зима", "весна" и т.д.).
 */
 
-/*let guess = parseInt(prompt("Введите число от 1 до 12"));
+let guess = parseInt(prompt("Введите число от 1 до 12"));
 if(guess > 0 && guess < 13){
 	if(guess < 3) console.log("На дворе зима")
 	else if(guess < 6) console.log("На дворе весна")
@@ -11,7 +11,7 @@ if(guess > 0 && guess < 13){
 	else if(guess < 12) console.log("На дворе осень")	
 	else if(guess === 12) console.log("На дворе зима")
 }
-else console.log("Некорректное значение")*/
+else console.log("Некорректное значение")
 
 	/*
 	Единицы длины пронумерованы следующим образом: 
@@ -20,7 +20,7 @@ else console.log("Некорректное значение")*/
     число). Вывести длину данного отрезка в метрах.
 	*/
 
-	/*let mesurement = parseInt(prompt("Введите единицу измерения"));
+	let mesurement = parseInt(prompt("Введите единицу измерения"));
 	let lengthValue = parseInt(prompt("Введите длину отрезка"));
 	let result = "";
 
@@ -31,7 +31,7 @@ else console.log("Некорректное значение")*/
 	else if(mesurement === 5) result = lengthValue * .01;
 	else console.log("Некорректное значение")
 
-	console.log(`Длина отрезка в метрах  = ${result.toFixed(1)}`)*/
+	console.log(`Длина отрезка в метрах  = ${result.toFixed(1)}`)
 
 	/*
 	Дано целое число, лежащее в диапазоне от -999 до 999. 
@@ -64,12 +64,12 @@ else console.log("Некорректное значение")*/
 	*/
 
 	//Коряво но работает 
-	/*for (let i = 1; i <= 100; i++) {
+	for (let i = 1; i <= 100; i++) {
 		if (i % 3 === 0) console.log("three");
 		else if (i % 5 === 0) console.log("five");
 		if (i % 3 === 0 && i % 5 === 0) console.log("threefive");
 		else console.log(i)
-	}*/
+	}
 
 
 	/*
@@ -96,6 +96,12 @@ else console.log("Некорректное значение")*/
     	console.log(year, "невисокосный год");
     }
     
+    /*
+    Задать количество тарелок и количество моющего средства.
+    Моющее средство расходуется из расчета 0,5 на одну тарелку.
+    В цикле выводить сколько моющего средства осталось после мытья каждой тарелки
+    В конце вывести, сколько тарелок осталось, когда моющее средство закончилось или наоборот.
+    */
 	
     let dishes = 13;
     let volume = 6;
