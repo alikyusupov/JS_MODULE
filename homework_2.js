@@ -3,7 +3,7 @@
     соответствующего времени года ("зима", "весна" и т.д.).
 */
 
-let guess = parseInt(prompt("Введите число от 1 до 12"));
+/*let guess = parseInt(prompt("Введите число от 1 до 12"));
 if(guess > 0 && guess < 13){
 	if(guess < 3) console.log("На дворе зима")
 	else if(guess < 6) console.log("На дворе весна")
@@ -11,7 +11,7 @@ if(guess > 0 && guess < 13){
 	else if(guess < 12) console.log("На дворе осень")	
 	else if(guess === 12) console.log("На дворе зима")
 }
-else console.log("Некорректное значение")
+else console.log("Некорректное значение")*/
 
 	/*
 	Единицы длины пронумерованы следующим образом: 
@@ -20,7 +20,7 @@ else console.log("Некорректное значение")
     число). Вывести длину данного отрезка в метрах.
 	*/
 
-	let mesurement = parseInt(prompt("Введите единицу измерения"));
+	/*let mesurement = parseInt(prompt("Введите единицу измерения"));
 	let lengthValue = parseInt(prompt("Введите длину отрезка"));
 	let result = "";
 
@@ -31,7 +31,7 @@ else console.log("Некорректное значение")
 	else if(mesurement === 5) result = lengthValue * .01;
 	else console.log("Некорректное значение")
 
-	console.log(`Длина отрезка в метрах  = ${result.toFixed(1)}`)
+	console.log(`Длина отрезка в метрах  = ${result.toFixed(1)}`)*/
 
 	/*
 	Дано целое число, лежащее в диапазоне от -999 до 999. 
@@ -64,12 +64,12 @@ else console.log("Некорректное значение")
 	*/
 
 	//Коряво но работает 
-	for (let i = 1; i <= 100; i++) {
+	/*for (let i = 1; i <= 100; i++) {
 		if (i % 3 === 0) console.log("three");
 		else if (i % 5 === 0) console.log("five");
 		if (i % 3 === 0 && i % 5 === 0) console.log("threefive");
 		else console.log(i)
-	}
+	}*/
 
 
 	/*
@@ -79,7 +79,7 @@ else console.log("Некорректное значение")
     2) '1800' – не високосный год
 	*/
 
-	let year = parseInt(prompt("Введите год"))
+	/*let year = parseInt(prompt("Введите год"))
 
     if(year % 4 === 0) {
         if(year % 100 === 0) {
@@ -94,7 +94,7 @@ else console.log("Некорректное значение")
     }
     else{
     	console.log(year, "невисокосный год");
-    }
+    }*/
     
     /*
     Задать количество тарелок и количество моющего средства.
@@ -103,25 +103,31 @@ else console.log("Некорректное значение")
     В конце вывести, сколько тарелок осталось, когда моющее средство закончилось или наоборот.
     */
 	
-    let dishes = 13;
+    let dishes = 10;
     let volume = 6;
 
     while(dishes > 0){
-    	dishes--;
-    	volume -= .5;
-    	console.log(volume)
-    	if (dishes && volume < .5) {
-    		console.log(`кончилось средство и осталось ${dishes} тарелок`);
+    	if (volume >= .5) {
+    		dishes--;
+	    	volume -= .5;
+	    	console.log(volume)
+	    	if (dishes && volume < .5) {
+	    		console.log(`кончилось средство и осталось ${dishes} тарелок`);
+	    		break;
+	    	}
+	    	if (dishes < 1 && volume > 0) {
+	    		console.log(`кончились тарелки и осталось ${volume} л. средства`);
+	    		break;
+	    	}
+	    	if (dishes === 1 && volume === .5){
+	    		console.log("средства хватило ровно на все тарелки - Вы Ювелир");
+	    		break;
+	    	}
+    	}else{
+    		console.log("Слишком мало средства");
     		break;
     	}
-    	if (dishes < 1 && volume > 0) {
-    		console.log(`кончились тарелки и осталось ${volume} л. средства`);
-    		break;
-    	}
-    	if (dishes === 1 && volume === .5){
-    		console.log("средства хватило ровно на все тарелки - Вы Ювелир");
-    		break;
-    	}
+    	
     }
 
 
