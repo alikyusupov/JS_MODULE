@@ -77,7 +77,7 @@ document.write(row)
 	*/
 
 	let ticker = 0;
-	for (var i = 1; i < 999999; i++) {
+	for (var i = 1; i <= 999999; i++) {
 		let paddedNum = i.toString().padStart(6,0);
 		if(
 			parseInt(paddedNum[0]) + parseInt(paddedNum[1]) + parseInt(paddedNum[2]) 
@@ -86,8 +86,7 @@ document.write(row)
 		) ticker++;
 	}
 
-	console.log(ticker)//55250
-
+	console.log(ticker)//55251
 
 
 	/*
@@ -118,7 +117,5 @@ document.write(row)
 				})
 			}
 		}
-	
-
 
 	console.log(sortedWeights)
