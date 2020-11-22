@@ -73,7 +73,7 @@ let alphabet = ["а","о","у","и","е","б","к","л","м","с"];
 let output = "";
 
 function verbum(a) {
-	let random_len = Math.floor(3 + Math.random() * (5 + 1 - 3));//3||4||5
+	let random_len = Math.floor(3 + Math.random() * (5 + 1 - 3));
 	let isVowel = random_len % 2 === 0;
 		for (let i = 0; i < random_len; i++) {
 			if (isVowel) {
@@ -88,10 +88,7 @@ function verbum(a) {
 	return output
 	}	
 
-
 console.log(verbum(alphabet))
 
-//0.987*10 = 9.87 = 9
-//0.123*10 = 1.23 = 1
-//0.001*10 = 0.01
+
 
