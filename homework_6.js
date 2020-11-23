@@ -33,28 +33,27 @@ console.log(foo(a,'count',10))
 хранится массив чисел, которые уже были сгенерированы функцией.
 */
 
-let arr = []
 
 function addRandomNumber(max){
+	let arr = []
 	return function(){
 		let value = Math.floor(Math.random()*max + 1);
-		if (arr.indexOf(value) < 0) {
-				arr.push(value)
-		}else{
-			console.log("сгенерироанное число уже есть в массиве")
+		while(arr.indexOf(value) > -1){
+			value = Math.floor(Math.random()*max + 1);
 		}
+		arr.push(value)
+
 		return arr;
 	}
 }
 
 let func = addRandomNumber(100);
 
-while(arr.length < 100){
-	func()
-	if (arr.length > 99) {
-		console.log(arr)
-	}
+for (var i = 0; i < 100; i++) {
+	console.log(func())
 }
+
+
 
 /*
 	3. Построить объект студент:

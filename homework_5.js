@@ -34,7 +34,7 @@ console.log(comaparator(array, array_));//true
 
 let range = (min, max, step)=>{
 	let array__ = [];
-	for (let i = min; i < max; i+=2) {
+	for (let i = min; i <= max; i+=2) {
 		array__.push(i);
 	}
 	return array__

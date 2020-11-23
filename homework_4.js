@@ -22,13 +22,14 @@ console.log(output)//Alissher Yussupov
 - содержит обязательно один из неалфавитных 
 символов (например, !, $, #, %).*/
 
-let regExp = /(?=.*[!#$%])(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]){3,}[0-9a-zA-Z!#$%]{9,}/
+let regExp = /(?=.*[!#$%])(?=.*[a-z])(?=.*[A-Z])(?=(.*\d){3,})[0-9a-zA-Z!#$%]{9,}/
 
 console.log(regExp.test("Algorithm!123"))//true
 console.log(regExp.test("algorithm!123"))//false
 console.log(regExp.test("Alg!or1ithM23"))//true
 console.log(regExp.test("AlgorithM#156"))//true
 console.log(regExp.test("Algo!123"))//false
+console.log(regExp.test("Algorithm!1"))//false
 
 
 
