@@ -138,12 +138,12 @@ let countdown = ()=>{
 	let remains = newYear - _date_;
 	let leftDays = Math.floor(remains / 1000 / 3600 / 24);
 	let leftHours = Math.floor((remains - leftDays * 1000 * 3600 *24) / 3600000)
-	let leftMinutes = Math.ceil((remains - (leftDays * 1000 * 3600 * 24 + leftHours * 1000 * 3600) ) / 60000);
+	let leftMinutes = Math.floor((remains - (leftDays * 1000 * 3600 * 24 + leftHours * 1000 * 3600) ) / 60000);
 	let d, h, m;
 
 	if (leftDays === 1 || leftDays === 21 || leftDays === 31)
 		d = "день";
-	else if (leftDays > 1 && leftDays < 5 || leftDays > 21 && leftDays < 25)
+	else if (leftDays > 1 && leftDays < 5 || leftDays > 21 && leftDays < 25 || leftDays > 31 && leftDays < 35)
 		d = "дня";
 	else
 		d = "дней";
