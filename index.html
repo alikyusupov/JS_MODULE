@@ -12,7 +12,7 @@
 			width: 100px;
 			text-align: center;
 		}*/
-		section{
+		/*section{
 			width: 500px;
 		}
 		img{
@@ -30,39 +30,91 @@
 			margin: 10px;
 			border: 1px solid black;
 			border-radius: 50%;
+		}*/
+		.active{
+			background-color: green;
+			border: 2px solid red;
+		}
+		.tab{
+			border: 1px solid gray;
+			padding: 10px;
+			cursor: pointer;
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
 		}
 	</style>
 </head>
 <body>
-<!--1-->
-	<span id="hrs">
-		
+	<!--домашка №7
+	<span id="hrs">	
 	</span>
 	<span id="mnts">
-		
 	</span>
 	<span id="scnds"></span>
-		
 	</span>
-<!--2-->
 	<div id="container">
-		
 	</div>
-<!--3-->
 	<div class="lights">
 		<div class="lights-item">
-
 		</div>
 		<div class="lights-item">
-
 		</div>
 		<div class="lights-item">
-
 		</div>
 	</div>
-<!--4-->
 	<div id="count">
 	</div>
-	<script type="text/javascript" src="./homework_7.js"></script>
+	-->
+	<!--домашка №8 -->
+	<div id="itemHolder">
+		<div class="item"></div>
+		<div class="item"></div>
+		<div class="item"></div>
+		<span>нажми на квадрат</span>
+		<hr>
+	</div>
+	<div>
+		<textarea id="comment" cols="60" rows="5"></textarea>
+		<button id="addPost">добавить пост</button>
+	</div>
+	<hr>
+	<div id="hook">
+		<!--крюк для таблицы-->
+	</div>
+	<hr>
+
+	<main>
+		<h3 style="text-align: center">Александр Сергеевич Пушкин</h3>
+		<section id="tabHolder" style="display: flex;justify-content: space-around;">
+			<div class="tab">Биография</div>
+			<div class="tab">Творчество</div>
+			<div class="tab">Смерть</div>
+		</section>
+		<section style="width: 100%; padding: 15px;">
+			<p>
+				Происхождение Александра Сергеевича Пушкина идёт
+			от разветвлённого нетитулованного дворянского рода Пушкиных, 
+			восходившего по генеалогической легенде к «мужу честну» Ратше. 
+			Пушкин неоднократно писал о своей родословной в стихах и прозе; 
+			он видел в своих предках образец истинной «аристократии», древнего рода, 
+			честно служившего отечеству, но не снискавшего благосклонности правителей 
+			и «гонимого». Не раз он обращался (в том числе в художественной форме) и 
+			к образу своего прадеда по матери — африканца Абрама Петровича Ганнибала, 
+			ставшего слугой и воспитанником Петра I, а потом военным инженером и генералом.
+			</p>
+			<p>
+				Ещё при жизни поэта стали именовать гением, в том числе печатно. 
+			Со второй половины 1820-х годов он стал считаться «первым русским поэтом» 
+			(не только среди современников, но и русских поэтов всех времён), а вокруг его 
+			личности среди читателей сложился настоящий культ. С другой стороны, в 1830-е годы 
+			(после его поэмы «Полтава») было и некотороее охлаждение части читающей публики к Пушкину.
+			</p>
+			<p>
+				Дуэль с Дантесом состоялась 27 января на Чёрной речке. 
+			Пушкин был ранен: пуля перебила шейку бедра и проникла в живот.
+			</p>
+		</section>
+	</main>
+	<script type="text/javascript" src="./homework_8.js"></script>
 </body>
 </html>
