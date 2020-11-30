@@ -20,20 +20,25 @@ y = x*x – 4*x, при x<1.
 Расчёт функции y = f(x) реализовать в виде отдельной функции.
 */
 
+
+let calcY = (x)=>{
+    if( x >= 1) {
+        return 5/x;
+    } else {
+        return x*x - 4*x;
+    }
+ }
+
 let chart = (min=-5, max=5, step=.01)=>{
 	let coords = {
 		x:[],
 		y:[],
 		type:'scatter'
 	};
+
 	for (let x = min; x <= max; x+=step) {
 		coords.x.push(x)
-		if (x >= 1){
-			coords.y.push(5/x)
-		}
-		else if(x < 1){
-			coords.y.push(x*x - 4*x)
-		}
+		coords.y.push(calcY(x))
 	}
 	return coords;
 }
