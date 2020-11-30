@@ -15,11 +15,13 @@ items.forEach(item=>{
 	item.style.width = "100px";
 	item.style.height = "100px";
 })
+
+let clickHandler = e =>{
+	e.target.classList.toggle("active")
+}
 	
 for (let i = 0; i < items.length; i++) {
-	items[i].addEventListener("click", e => {
-		e.target.classList.toggle("active")
-	})
+	items[i].addEventListener("click",clickHandler)
 }
 
 /*
