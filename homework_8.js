@@ -110,19 +110,19 @@ let convertToTable = arr =>{
 let books = [
 	{
 		id:"item01",
-		author:"Theodore Dreiser",
+		author:"Гоголь Н. В.",
 		title:"American tragedy",
 		desc:"A true story ...."
 	},
 	{
 		id:"item02",
-		author:"Ernest Hemingway",
-		title:"A farewell to arms",
-		desc:"A famous  story ..."
+		author:"Достоевский Ф. М.",
+		title:"Преступление и наказание",
+		desc:"История об одном..."
 	},
 	{
 		id:"item03",
-		author:"Антон Павлович Чехов",
+		author:"Чехов А. П.",
 		title:"Человек в футляре",
 		desc:"Сатирический рассказ ..."
 	}

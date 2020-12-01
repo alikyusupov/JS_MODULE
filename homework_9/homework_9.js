@@ -121,3 +121,90 @@ const game = (n)=>{
 
 game(3)
 
+/*
+5*. Написать функцию, которая будет осуществлять сортировку таблицы из  
+предыдущего дз по значениям столбца при нажатии на название этого столбца.
+*/
+
+
+
+let convertToTable = arr =>{//функция из прошлого ДЗ
+	const table = document.createElement("table");
+	table.style.width = "700px";
+	table.style.border = "1px solid black";
+	table.style.margin = "0 auto";
+	table.style.textAlign = "center";
+	const trTag = document.createElement("tr");
+	table.appendChild(trTag)
+	const headers = ["ID","Author","Title", "Description"];
+	for (let i = 0; i < headers.length; i++) {
+		const thTAg = document.createElement("th");
+		thTAg.innerText = headers[i]
+		trTag.appendChild(thTAg);
+	}
+	for (let j = 0; j < arr.length; j++) {
+		const trTag_ = document.createElement("tr");
+		for (let prop in arr[j] ) {
+			const tdTAg = document.createElement("td");
+			tdTAg.innerText = arr[j][prop];
+			trTag_.appendChild(tdTAg)
+		}
+		table.appendChild(trTag_)
+	}
+	hook.appendChild(table)
+}
+
+let books = [
+	{
+		id:"item087",
+		author:"Достоевский Ф. М.",
+		title:"Преступление и наказание",
+		desc:"История об одном..."
+	},
+	{
+		id:"item002",
+		author:"Чехов А. П.",
+		title:"Человек в футляре",
+		desc:"Сатирический рассказ ..."
+	},
+	{
+		id:"item111",
+		author:"Гоголь Н. В.",
+		title:"Мертвые души",
+		desc:"Почти детективная ..."
+	}
+]
+
+convertToTable(books)
+
+let tempArr = [];
+
+/*
+Столкнулся с проблемой  - сортировка происходила только один раз
+Чтобы отсортировать по другому запросу нужно было перезагрузить страницу
+Пришлось добавить вспомогательную функцию initHandlers(),
+так как после перерисовки DOMа браузер удалял EventListener с тэга th
+*/
+
+
+function sortByClick(e){//функция сортировки
+	if(e.target.innerText === "ID")
+		tempArr = books.sort((a, b) => a.id > b.id)
+	else if(e.target.innerText === "Author")
+		tempArr = books.sort((a, b) => a.author > b.author)
+	else if(e.target.innerText === "Title")
+		tempArr = books.sort((a, b) => a.title > b.title)
+	hook.innerHTML = "";
+	convertToTable(tempArr)
+	initHandlers()
+
+}
+
+let initHandlers = ()=>{
+	let ths = document.querySelectorAll("th");
+	for (let i = 0; i < ths.length; i++) {
+		ths[i].addEventListener("click",sortByClick)
+	}
+}
+
+initHandlers()
