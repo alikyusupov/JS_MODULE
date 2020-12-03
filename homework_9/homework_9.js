@@ -8,7 +8,7 @@
 */
 console.log(tools.detectMin([11,2,3,4]))//2
 console.log(tools.detectMax([11,2,3,4]))//11
-console.log(tools.detectMedian([11,2,3,4]))//20
+console.log(tools.detectMedian([11,2,3,4]))//5
 console.log(tools.cloneArray([11,2,3,4]))//[11,2,3,4]
 
 /*
@@ -208,3 +208,11 @@ let initHandlers = ()=>{
 }
 
 initHandlers()
+
+let v = ["asf", 'zdf', 'bsf','bnz'].sort((a, b) => a > b)
+console.log(v)//
+/*
+0: "asf"
+1: "bsf"
+2: "zdf"
+*/

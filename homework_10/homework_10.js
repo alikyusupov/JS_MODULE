@@ -28,8 +28,8 @@ function Cart(){
 		items.push(p)
 	}
 	this.getTotal = function(){
-		totalSum = items.reduce((a, b)=>a.price + b.price);
-		return totalSum
+		items.forEach(o => totalSum += o.price);
+		return totalSum.toFixed(2)
 	}
 	this.getQty = function(){
 		return items.length;
@@ -41,7 +41,8 @@ let _cart_ = new Cart();
 //добавляем два одинаковых товара созданных ранее
 _cart_.addItem(prod);
 _cart_.addItem(prod);
-console.log(_cart_.getTotal())//159.98
+_cart_.addItem(prod);
+console.log(_cart_.getTotal())//239.97
 console.log(_cart_.getQty())//2
 
 /*

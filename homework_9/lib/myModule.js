@@ -17,7 +17,7 @@
 			return Math.max(...arr);
 		},
 		detectMedian: (arr)=>{
-			return arr.reduce((a, b)=> a + b)
+			return arr.reduce((a, b)=>a + b)/arr.length;
 		},
 		cloneArray: (arr) =>{
 			let cloned = [...arr];
