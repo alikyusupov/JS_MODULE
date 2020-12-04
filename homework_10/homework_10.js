@@ -23,12 +23,13 @@ console.log(prod.name, prod.price)//"Wallet" 79.99
 function Cart(){
 	let items = [];
 	let numOfItems = items.length;
-	let totalSum = 0;
+	
 	this.addItem = function(p){
 		items.push(p)
 	}
 	this.getTotal = function(){
-		items.forEach(o => totalSum += o.price);
+		let totalSum = 0;
+		items.forEach(o =>totalSum += o.price);
 		return totalSum.toFixed(2)
 	}
 	this.getQty = function(){
@@ -42,6 +43,7 @@ let _cart_ = new Cart();
 _cart_.addItem(prod);
 _cart_.addItem(prod);
 _cart_.addItem(prod);
+console.log(_cart_.getTotal())//239.97
 console.log(_cart_.getTotal())//239.97
 console.log(_cart_.getQty())//2
 

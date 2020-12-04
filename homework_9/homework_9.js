@@ -189,11 +189,29 @@ let tempArr = [];
 
 function sortByClick(e){//функция сортировки
 	if(e.target.innerText === "ID")
-		tempArr = books.sort((a, b) => a.id > b.id)
+		tempArr = books.sort((a, b) => {
+			if (a.id < b.id)
+			  return -1;
+			if (a.id > b.id)
+			  return 1;
+			return 0;
+		})
 	else if(e.target.innerText === "Author")
-		tempArr = books.sort((a, b) => a.author > b.author)
+		tempArr = books.sort((a, b) => {
+			if (a.author < b.author)
+			  return -1;
+			if (a.author > b.author)
+			  return 1;
+			return 0;
+		})
 	else if(e.target.innerText === "Title")
-		tempArr = books.sort((a, b) => a.title > b.title)
+		tempArr = books.sort((a, b) => {
+			if (a.title < b.title)
+			  return -1;
+			if (a.title > b.title)
+			  return 1;
+			return 0;
+		})
 	hook.innerHTML = "";
 	convertToTable(tempArr)
 	initHandlers()
@@ -209,10 +227,3 @@ let initHandlers = ()=>{
 
 initHandlers()
 
-let v = ["asf", 'zdf', 'bsf','bnz'].sort((a, b) => a > b)
-console.log(v)//
-/*
-0: "asf"
-1: "bsf"
-2: "zdf"
-*/
