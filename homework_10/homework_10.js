@@ -23,7 +23,6 @@ console.log(prod.name, prod.price)//"Wallet" 79.99
 function Cart(){
 	let items = [];
 	let numOfItems = items.length;
-	
 	this.addItem = function(p){
 		items.push(p)
 	}
