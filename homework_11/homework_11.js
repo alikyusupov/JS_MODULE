@@ -25,9 +25,10 @@ class Product extends SuperProduct{
 	}
 }
 
-function Cart(){}
+function Cart(){
+	this.products = [];
+}
 
-Cart.prototype.products = [];
 
 Cart.prototype.addItem = function(p){
 	this.products.push(p)
@@ -87,6 +88,8 @@ function Student(name, age, sex, hobbies, education){
 Student.prototype.toString = function(){
 	return `Человек: ${this.name}. Возраст: ${this.age}. Пол: ${this.sex}. Интересы:${this.hobbies.map(h=>" "+h)}. Обучается в: ${this.education}`;
 }
+
+Student.prototype.__proto__ = Homo.prototype;
 
 let student = new Student("Алишер", 33, "мужской", ["web","svg","node"],"ITMO")
 console.log(student.toString())//Человек: Алишер. Возраст: 33. Пол: мужской. Интересы: web, svg, node. Обучается в: ITMO
