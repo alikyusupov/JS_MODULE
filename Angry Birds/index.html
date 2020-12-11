@@ -3,14 +3,34 @@
 <head>
 	<meta charset="utf-8">
 	<title>Angry JS</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		#sketch{
+			max-width: 960px;
+			max-height: 640px;
+		}
+		span{
+			padding: 5px;
+			border: 3px solid white;
+			border-radius: 10px;
+			font-weight: bold;
+			color: white;
+			cursor: pointer;
+		}
+	</style>
 <body>
-	<div id="sketch"></div>
+
+	<div id="sketch">
+			
+	</div>
+
 	<script type="text/javascript" src="./matter.min.js"></script>
 	<script type="text/javascript" src="./p5.min.js"></script>
-	<script type="text/javascript" src="./box.js"></script>
-	<script type="text/javascript" src="./ground.js"></script>
-	<script type="text/javascript" src="./bird.js"></script>
+	<script type="text/javascript" src="./utils/classes.js"></script>
 	<script type="text/javascript" src="./sketch.js"></script>
-	<script type="text/javascript" src="./slingshot.js"></script>
 </body>
 </html>
